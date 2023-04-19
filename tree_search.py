@@ -105,7 +105,7 @@ class Node:
         # Subtree node has 1 children
         if self.right or self.left:
             child = self.right if self.right else self.left
-            if child.key in nodes:
+            if child.key in nodes and differ:
                 return self
             else:
                 return child.lca(nodes, differ)
